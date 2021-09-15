@@ -12,4 +12,4 @@ import { HttpClientModule } from '@angular/common/http';
   providers: [LoginService],
   bootstrap: [LoginComponent]
 })
-export class GroceryModule { }
+export class LoginModule { }

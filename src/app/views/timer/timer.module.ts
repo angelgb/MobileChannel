@@ -12,4 +12,4 @@ import { HttpClientModule } from '@angular/common/http';
   providers: [TimerService],
   bootstrap: [TimerComponent]
 })
-export class GroceryModule { }
+export class TimerModule { }
