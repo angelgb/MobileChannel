@@ -2,10 +2,22 @@
     <h1>Welcome!</h1>
     <h2>The last time you accessed was</h2>
     <div class='clock'>
-        <span>{{getDisplayTimer().days}}</span>
-        <span>{{getDisplayTimer().hours}}</span>
-        <span>{{getDisplayTimer().minutes}}</span>
-        <span>{{getDisplayTimer().seconds}}</span>
+        <div>
+            <span>{{getDisplayTimer().days}}</span>
+            <b>DAYS</b>
+        </div>
+        <div>
+            <span>{{getDisplayTimer().hours}}</span>
+            <b>HOURS</b>
+        </div>
+        <div>
+            <span>{{getDisplayTimer().minutes}}</span>
+            <b>MINUTES</b>
+        </div>
+        <div>
+            <span>{{getDisplayTimer().seconds}}</span>
+            <b>SECONDS</b>
+        </div>
     </div>
     <button (click)='logOut()'>Logout</button>
 </div>

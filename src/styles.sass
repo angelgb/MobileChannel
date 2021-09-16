@@ -12,8 +12,31 @@ body
         display: flex
         flex-direction: column
         align-items: center
-        *
-            margin: 10px
+        & > *
+            margin: variables.$margin
         i
             font-size: 80px
             color: colors.$blue3
+        button
+            background-color: colors.$blue2
+            color: colors.$white 
+            border: none
+        input
+            background-color: colors.$white 
+            border: none
+            border-bottom: 2px solid colors.$blue2
+        .clock
+            display: flex
+            flex-direction: row
+            & > div
+                color: colors.$blue4
+                display: flex
+                flex-direction: column
+                margin: 0 variables.$margin
+                span
+                    font-size: 50px
+                    display: flex
+                    justify-content: center
+                b
+                    display: flex
+                    justify-content: center
