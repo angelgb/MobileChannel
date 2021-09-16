@@ -6,11 +6,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [LoginComponent],
-  imports: [
-    BrowserModule,
-    HttpClientModule
-  ],
+  imports: [BrowserModule, HttpClientModule],
   providers: [LoginService],
-  bootstrap: [LoginComponent]
+  bootstrap: [LoginComponent],
 })
-export class LoginModule { }
+export class LoginModule {}

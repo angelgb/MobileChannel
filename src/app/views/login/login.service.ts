@@ -10,7 +10,7 @@ export class LoginService {
 
   public getLogin(user: any): Observable<object> {
     return this.http.get(
-      `${this.BASE_PATH}/${user.id}`
+      `${this.BASE_PATH}?password=${user.password}&id=${user.id}`
     );
   }
 

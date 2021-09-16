@@ -21,8 +21,12 @@ export class LoginComponent {
     }
     this.msgError = '';
     this.loginService.getLogin({ id: email, password: pass }).subscribe(
-      () => {
-        this.navigateToTimer(email);
+      (data: any) => {
+        if (!data.length) {
+          this.msgError = 'Not Found'
+        } else {
+          this.navigateToTimer(email);
+        }
       },
       (error: any) => {
         this.msgError = error.statusText;
