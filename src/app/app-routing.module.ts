@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginModule } from './views/login/login.module';
-import { TimerModule } from './views/timer/timer.module';
+import { LoginComponent } from './views/login/login.component';
+import { TimerComponent } from './views/timer/timer.component';
 
 const routes: Routes = [
-  { path: 'login', component: LoginModule},
-  { path: 'timer', component: TimerModule},
-  { path: '**', component: LoginModule}
+  { path: 'login', component: LoginComponent},
+  { path: 'timer', component: TimerComponent},
+  { path: '**', component: LoginComponent}
 ];
 
 @NgModule({
