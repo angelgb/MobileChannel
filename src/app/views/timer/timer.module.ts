@@ -7,7 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [TimerService],
   bootstrap: [TimerComponent]
