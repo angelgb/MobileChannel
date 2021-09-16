@@ -8,9 +8,9 @@ export class TimerService {
   
   private BASE_PATH = 'http://localhost:3000/login'
 
-  public getLogin(): Observable<object> {
-    return this.http.get(
-      `${this.BASE_PATH}`
+  public patchUser(id: string): Observable<object> {
+    return this.http.patch(
+      `${this.BASE_PATH}/${id}`, {timestamp: new Date().getTime()}
     );
   }
 

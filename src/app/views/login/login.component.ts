@@ -11,8 +11,8 @@ export class LoginComponent {
 
   constructor(private loginService: LoginService, private router: Router) {}
 
-  public navigateToTimer() {
-    this.router.navigate(['timer']);
+  public navigateToTimer(email: string) {
+    this.router.navigate(['timer', {id: email}]);
   }
 
   public doLogin(email: string, pass: string) {
@@ -22,7 +22,7 @@ export class LoginComponent {
     this.msgError = '';
     this.loginService.getLogin({ id: email, password: pass }).subscribe(
       () => {
-        this.navigateToTimer();
+        this.navigateToTimer(email);
       },
       (error: any) => {
         this.msgError = error.statusText;
