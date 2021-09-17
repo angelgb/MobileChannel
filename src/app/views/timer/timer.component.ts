@@ -15,6 +15,12 @@ export class TimerComponent implements OnInit {
   ) {}
   private timestamp: number = 0;
   private timer: any;
+  private TIME_UNITS = {
+    MILISECONDS: 1000,
+    SECONDS_HOUR: 3600,
+    HORS_DAY: 24,
+    SECONDS_MINUTE: 60,
+  };
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
@@ -36,11 +42,19 @@ export class TimerComponent implements OnInit {
   }
 
   public getDisplayTimer() {
-    const time: number = this.getCurrent() / 1000;
-    const days = `0${Math.floor(time / (3600 * 24))}`;
-    const hours = `0${Math.floor(time / 3600) % 24}`;
-    const minutes = `0${Math.floor((time % 3600) / 60)}`;
-    const seconds = `0${Math.floor((time % 3600) % 60)}`;
+    const time: number = this.getCurrent() / this.TIME_UNITS.MILISECONDS;
+    const days = `0${Math.floor(
+      time / (this.TIME_UNITS.SECONDS_HOUR * this.TIME_UNITS.HORS_DAY)
+    )}`;
+    const hours = `0${
+      Math.floor(time / this.TIME_UNITS.SECONDS_HOUR) % this.TIME_UNITS.HORS_DAY
+    }`;
+    const minutes = `0${Math.floor(
+      (time % this.TIME_UNITS.SECONDS_HOUR) / this.TIME_UNITS.SECONDS_MINUTE
+    )}`;
+    const seconds = `0${Math.floor(
+      (time % this.TIME_UNITS.SECONDS_HOUR) % this.TIME_UNITS.SECONDS_MINUTE
+    )}`;
 
     return {
       days: days,
