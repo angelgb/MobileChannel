@@ -12,7 +12,7 @@ export class LoginComponent {
   constructor(private loginService: LoginService, private router: Router) {}
 
   public navigateToTimer(email: string) {
-    this.router.navigate(['timer', {id: email}]);
+    this.router.navigate(['timer', { id: email }]);
   }
 
   public doLogin(email: string, pass: string) {
@@ -23,7 +23,7 @@ export class LoginComponent {
     this.loginService.getLogin({ id: email, password: pass }).subscribe(
       (data: any) => {
         if (!data.length) {
-          this.msgError = 'Not Found'
+          this.msgError = 'Not Found';
         } else {
           this.navigateToTimer(email);
         }
