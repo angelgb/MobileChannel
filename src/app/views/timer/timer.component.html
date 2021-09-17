@@ -3,20 +3,20 @@
     <h2 i18n='timer disclaimer|timer'>The last time you accessed was</h2>
     <div class='clock'>
         <div>
-            <span>{{getDisplayTimer().days}}</span>
-            <b i18n='days label|timer'>DAYS</b>
+            <span>{{timerData.days}}</span>
+            <p i18n='days label|timer'>DAYS</p>
         </div>
         <div>
-            <span>{{getDisplayTimer().hours}}</span>
-            <b i18n='hours label|timer'>HOURS</b>
+            <span>{{timerData.hours}}</span>
+            <p i18n='hours label|timer'>HOURS</p>
         </div>
         <div>
-            <span>{{getDisplayTimer().minutes}}</span>
-            <b i18n='minutes label|timer'>MINUTES</b>
+            <span>{{timerData.minutes}}</span>
+            <p i18n='minutes label|timer'>MINUTES</p>
         </div>
         <div>
-            <span>{{getDisplayTimer().seconds}}</span>
-            <b i18n='seconds label|timer'>SECONDS</b>
+            <span>{{timerData.seconds}}</span>
+            <p i18n='seconds label|timer'>SECONDS</p>
         </div>
     </div>
     <button (click)='logOut()' i18n='logout button|timer'>Logout</button>

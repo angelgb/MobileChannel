@@ -21,6 +21,12 @@ export class TimerComponent implements OnInit {
     HORS_DAY: 24,
     SECONDS_MINUTE: 60,
   };
+  public timerData = {
+    days: '00',
+    hours: '00',
+    minutes: '00',
+    seconds: '00',
+  };
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
@@ -32,7 +38,7 @@ export class TimerComponent implements OnInit {
   }
 
   private loadData(id: string) {
-    this.timerService.patchUser(id).subscribe((data: any) => {
+    this.timerService.patchTimestampByUser(id).subscribe((data: any) => {
       this.timestamp = data.timestamp;
     });
   }
@@ -56,7 +62,7 @@ export class TimerComponent implements OnInit {
       (time % this.TIME_UNITS.SECONDS_HOUR) % this.TIME_UNITS.SECONDS_MINUTE
     )}`;
 
-    return {
+    this.timerData = {
       days: days,
       hours: hours.slice(-2),
       minutes: minutes.slice(-2),

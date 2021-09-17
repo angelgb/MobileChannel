@@ -2,6 +2,10 @@
 
 This project was generated with version 12.1.4.
 
+## Install
+
+install using `npm install`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. 
