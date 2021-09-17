@@ -1,23 +1,23 @@
 <div class='panel-container'>
-    <h1>Welcome!</h1>
-    <h2>The last time you accessed was</h2>
+    <h1 i18n='welcome title|timer'>Welcome!</h1>
+    <h2 i18n='timer disclaimer|timer'>The last time you accessed was</h2>
     <div class='clock'>
         <div>
             <span>{{getDisplayTimer().days}}</span>
-            <b>DAYS</b>
+            <b i18n='days label|timer'>DAYS</b>
         </div>
         <div>
             <span>{{getDisplayTimer().hours}}</span>
-            <b>HOURS</b>
+            <b i18n='hours label|timer'>HOURS</b>
         </div>
         <div>
             <span>{{getDisplayTimer().minutes}}</span>
-            <b>MINUTES</b>
+            <b i18n='minutes label|timer'>MINUTES</b>
         </div>
         <div>
             <span>{{getDisplayTimer().seconds}}</span>
-            <b>SECONDS</b>
+            <b i18n='seconds label|timer'>SECONDS</b>
         </div>
     </div>
-    <button (click)='logOut()'>Logout</button>
+    <button (click)='logOut()' i18n='logout button|timer'>Logout</button>
 </div>
