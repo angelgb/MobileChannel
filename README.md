@@ -15,3 +15,7 @@ Run `json-server --watch ./API_mock/db.json` on root
 "angel@gmail.com" "1234"
 "gft@gmail.com"   "gft"
 "bbva@gmail.com"  "bbva"
+
+## locale
+
+transalation file generated. ready for multilanguage
