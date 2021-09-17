@@ -37,12 +37,12 @@ export class TimerComponent implements OnInit {
     });
   }
 
-  private getCurrent(): number {
+  private getCurrentTime(): number {
     return new Date().getTime() - this.timestamp;
   }
 
   public getDisplayTimer() {
-    const time: number = this.getCurrent() / this.TIME_UNITS.MILISECONDS;
+    const time: number = this.getCurrentTime() / this.TIME_UNITS.MILISECONDS;
     const days = `0${Math.floor(
       time / (this.TIME_UNITS.SECONDS_HOUR * this.TIME_UNITS.HORS_DAY)
     )}`;
