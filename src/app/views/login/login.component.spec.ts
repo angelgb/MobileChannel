@@ -19,4 +19,20 @@ describe('GroceryComponent', () => {
     const component = fixture.componentInstance;
     expect(component).toBeTruthy();
   });
+
+  it('navigateToTimer', () => {
+    const fixture = TestBed.createComponent(LoginComponent);
+    const component = fixture.componentInstance;
+    expect(component.navigateToTimer).toBeDefined();
+    component.navigateToTimer('a@b.c');
+  });
+
+  it('doLogin', () => {
+    const fixture = TestBed.createComponent(LoginComponent);
+    const component = fixture.componentInstance;
+    expect(component.doLogin).toBeDefined();
+    expect(component.doLogin('', '1234')).toBeFalsy();
+    expect(component.doLogin('a@b.c', '')).toBeFalsy();
+    expect(component.doLogin('a@b.c', '1234')).toBeTruthy();
+  });
 });

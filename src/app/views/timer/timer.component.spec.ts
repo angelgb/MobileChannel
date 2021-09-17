@@ -19,4 +19,18 @@ describe('GroceryComponent', () => {
     const component = fixture.componentInstance;
     expect(component).toBeTruthy();
   });
+
+  it('getDisplayTimer', () => {
+    const fixture = TestBed.createComponent(TimerComponent);
+    const component = fixture.componentInstance;
+    expect(component.getDisplayTimer).toBeDefined();
+    component.getDisplayTimer();
+  });
+
+  it('logOut', () => {
+    const fixture = TestBed.createComponent(TimerComponent);
+    const component = fixture.componentInstance;
+    expect(component.logOut).toBeDefined();
+    component.logOut();
+  });
 });
